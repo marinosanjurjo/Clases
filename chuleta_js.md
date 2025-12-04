@@ -42,6 +42,33 @@ function (escribe una funcion) + nombre que le quiera dar (){
 console.log("Hola mundo")
 ````
 
+
+## Seleccionar NODOS HTML
+### 1. Usar un identificador
+Todos los identificadores UNICOS generan una variable en JS con el mismo nombre.
+
+````html
+<div id="contenedor_main">
+        <h2> Hola cabecera </h2>
+    </div>
+````
+
+````js
+console.log(contenedor_main);
+````
+
+## Pintar en la web
+
+SUSTITUYE todo lo que hay
+````js
+contenedor_main.innerHTML = 'Nuevo código añadido por JS';
+````
+
+Para mantener contenido
+````js
+contenedor_main.innerHTML = contenedor_main.innerHTML + '<h1 class="destacado">Nuevo código añadido por JS</h1>'
+````
+
 ## Eventos
 
 ### 1. Atributo dentro de HTML
@@ -55,5 +82,15 @@ Uso un atributo de evento y tengo el nombre de la función con ()
 ````js
 function escribePorConsola(){
     console.log('Boton clicado');
+}
+````
+
+## For
+Un trozo de código que se repite un número **DETERMINADO** de veces
+1. Primera versión de for
+
+````js
+for(let i = 0; i<10; i++){
+    console.log('Hola', i);
 }
 ````
