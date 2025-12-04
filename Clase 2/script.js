@@ -108,7 +108,8 @@ console.log(contenedor_main);
 // La MEJOR opción para seleccionar SOLO un elemento
 let nodoContenidoMain = document.querySelector('#contenedor_main');
 
-let nodoVerde =  document.querySelector('.verde');
+//Cuando queremos seleccionar más de uno
+let nodoVerde =  document.querySelectorAll('.verde');
 console.log(nodoVerde)
 
 // PINTO en la web
