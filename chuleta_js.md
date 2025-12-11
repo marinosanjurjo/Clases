@@ -98,6 +98,21 @@ Para mantener contenido
 contenedor_main.innerHTML = contenedor_main.innerHTML + '<h1 class="destacado">Nuevo código añadido por JS</h1>'
 ````
 
+NOTA: Generar el elemento HTML completo antes de pintar
+
+NOTA 2: Usar template String RECOMENDADO
+
+````js
+// TEMPLATE STRING
+// Sacar las variables con ${ }
+let cadenaDeTextoTemplate = `
+    <div class="ficha"> 
+        <h2> ${cadaAlumno} </h2>
+       <p> ${color} </p>
+    </div>
+`
+````
+
 ## Eventos
 
 ### 1. Atributo dentro de HTML
@@ -156,6 +171,57 @@ for(let i = 0; i<10; i++){
 }
 ````
 
+### For of y for in
+
+````js
+// CASO ESPECIAL: Recorrer un array COMPLETO
+// For of
+for(const cadaAlumno of alumnos){
+    // cadaAlumno es la variable donde va a estar el valor
+    console.log('cadaAlumno');
+    console.log(cadaAlumno);
+}
+
+// For in
+for (const indice in alumnos){
+    console.log('indice');
+    console.log(indice);
+    console.log(alumnos[indice]);
+}
+````
+
+## While
+
+Trozo de código que se ejecuta un número INDETERMINADO de veces.
+
+NOTA: Casi siempre que piense en el while -> pensar en FOR
+````js
+let juegoEncendido = true;
+let direccion = 'T' // 'T B R L
+
+while(juegoEncendido){
+
+    switch(direccion){
+        case 'T':
+            mueveArriba();
+        break;
+        case 'B':
+            mueveAbajo();
+        break;
+        case 'R':
+            mueveDerecha();
+        break;
+        case 'L':
+            mueveIzquierda();
+        break;
+        case 'STOP':
+            juegoEncendido = false;
+        break;
+        
+    }
+}
+````
+
 ## Acceder a valores de input
 
 ````js
@@ -166,7 +232,66 @@ for(let i = 0; i<10; i++){
     console.log('Número');
     console.log(n);
 ````
+## Switch
 
+Solo lo vamos a usar para comparar la igualdad de una variable DISCRETA
+
+````js
+const hoy = new Date();
+const dia = hoy.getDay(); // Día de la semana
+/**
+ * 0 -> Domingo
+ * 1 -> Lunes
+ * 2 -> Martes
+ * 3 -> Miércoles
+ * 4 -> Jueves
+ * 5 -> Viernes
+ * 6 -> Sábado
+ */
+console.log(hoy);
+console.log(dia);
+
+/**
+ * VARIABLES que son DISCRETAS (valores fijos)
+ * Y estamos preguntado por IGUALDAD
+ * 1 sola variable DISCRETA
+ */
+
+let nombreDia = '';
+
+/*if(dia === 0){
+    nombreDia = 'Domingo';
+}else if (dia === 1){
+    nombreDia = 'Lunes';
+}else if (dia === 2){
+    nombreDia = 'Martes';
+}*/
+
+switch( dia ){
+    case 0:
+        nombreDia = 'Domingo';
+        break;
+    case 1:
+        nombreDia = 'Lunes';
+        break;
+    case 2:
+        nombreDia = 'Martes';
+        break;
+    case 3:
+        nombreDia = 'Miércoles';
+        break;
+    case 4:
+        nombreDia = 'Jueves';
+        break;
+
+    
+    
+    default:
+        nombreDia = 'Error';
+}
+
+console.log(nombreDia)
+````
 
 ## Funciones
 
