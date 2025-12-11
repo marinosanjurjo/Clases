@@ -124,7 +124,27 @@ function escribePorConsola(){
 
     nodoCuadrado.classList.add('rotando')
 ````
+## IF
 
+````js
+let edad_usuario = 10;
+/**
+ * 
+ * Cuando tenemos una variable de rango con varias interacciones
+ * Cuando tengo muchas condiciones complejas con varias interacciones
+ * 
+ */
+
+if (edad_usuario < 2){
+
+}else if(edad_usuario < 12){
+
+}else if (edad_usuario < 16){
+
+}else{
+
+}
+````
 
 ## For
 Un trozo de código que se repite un número **DETERMINADO** de veces
@@ -145,4 +165,58 @@ for(let i = 0; i<10; i++){
     // console.log(number1.valueAsNumber); // Convertir en NUMERO
     console.log('Número');
     console.log(n);
+````
+
+
+## Funciones
+
+Trozo de código que tiene un 
+
+Aislar funcionalidad y dar "responsabilidad" a cada trozo de módulo
+
+Sólo hagan una cosa
+
+Una función DEBE verse en menos de una pantalla
+
+CREAN un contexto nuevo -> Lo veremos más adelante
+
+````js
+
+//Pintar en la web
+// Modifica el sistema
+function saluda(nombre, apellido){
+    nodoPrincipal.innerHTML = 'Hola ' + nombre + ' ' + apellido + '!!';
+}
+
+//Parámetros
+saluda('Luis', 'J');
+saluda('María', 'G');
+
+// Devolver TRUE o FALSE
+function isPar(numero_parametro){
+    const resto = numero_parametro % 2;
+    console.log ('entrada', numero_parametro);
+    if (resto === 0){
+        console.log('TRUE');
+        return true; // la salida de la función
+    }else{
+        console.log('FALSE');
+        return false; // la salida de la función
+    }
+}
+````
+
+### Arrow functions
+
+Necesitan SER DEFINIDAS ANTES de ejecutarse
+
+No crean nuevos contextos, acceden al contexto SUPERIOR
+
+````js
+// ARROW FUNCTION
+
+const otroSaludo = (nombre, apellido) => {
+    console.log('Saludo otra vez a ' + nombre + ' ' + apellido);
+}
+
 ````
