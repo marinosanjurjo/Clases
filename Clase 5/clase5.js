@@ -211,7 +211,18 @@ const nodoMiListaCompra = document.querySelector('#miListaCompra');
 // nodoMiListaCompra.innerHTML = '<li class="item" > Fruta1 </li>;
 
 
+//for(let x=0; x< listaCompra.length; x++){
+//    console.log(listaCompra[x]);
+//    nodoMiListaCompra.innerHTML = nodoMiListaCompra.innerHTML + '<li class="item">' + listaCompra[x] + '</li>';
+    // nodoMiListaCompra.innerHTML += '<li class="item"> + listaCompra[x] + '</li>';
+//}
+
+
+let str_html = '';
+
 for(let x=0; x< listaCompra.length; x++){
     console.log(listaCompra[x]);
-    nodoMiListaCompra.innerHTML = nodoMiListaCompra.innerHTML + '<li class="item">' + listaCompra[x] + '</li>';
+    str_html = str_html + '<li class="item">' + listaCompra[x] + '</li>';
 }
+
+nodoMiListaCompra.innerHTML = str_html;
