@@ -137,8 +137,22 @@ function escribePorConsola(){
 
     // Añadir una clase a cualquier NODO HTML INDIVIDUAL
 
-    nodoCuadrado.classList.add('rotando')
+    nodoCuadrado.classList.add('rotando');
+    nodoCuadrado.classList.remove('rotando');
+
+    // Quitar y poner
+    nodoCuadrado.classList.toggle('rotando');
 ````
+
+## Cambiar el estilo de un elemento
+
+````js
+
+// .style. puedo acceder a cualquier propiedad de CSS
+cadaNodo.style.width = anchoCuadrados+'px';
+
+````
+
 ## IF
 
 ````js
