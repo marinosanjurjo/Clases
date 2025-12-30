@@ -84,6 +84,39 @@ let nodoContenidoMain = document.querySelector('#contenedor_main');
 let nodoVerde =  document.querySelectorAll('.verde');
 ````
 
+NOTA: Puedo usar estos métodos sobre CUALQUIER NODO HTML que tenga en JavaScript
+
+````html
+<div id="principal">
+        <h2>Viva JavaScript</h2>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+    <div class="gridCuadrados">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+````
+
+````js
+// Estamos buscando en document -> NODO Principal
+const nodoPrincipal = document.querySelector('#principal')
+
+console.log(nodoPrincipal);
+console.log(nodoPrincipal.id);
+nodoPrincipal.style.color = 'red';
+
+// Si sustituyo DOCUMENT por CUALQUIER NODO HTML para hacer la búsqueda
+// const listaNodosCuadrados = document.querySelectorAll('.cuadrado');
+const listaNodosCuadrados = nodoPrincipal.querySelectorAll('.cuadrado');
+
+console.log(listaNodosCuadrados);
+````
+
 ## Pintar en la web
 
 Primero seleccionar un nodo
@@ -127,6 +160,17 @@ Uso un atributo de evento y tengo el nombre de la función con ()
 function escribePorConsola(){
     console.log('Boton clicado');
 }
+````
+
+### 2. Add Event Listener RECOMENDADO
+
+````js
+const nodoMiBoton = document.querySelector('#miBoton');
+
+nodoMiBoton.addEventListener('click', function(){
+    // Lo que yo quiera
+});
+
 ````
 
 ## Añadir y quitar clases
