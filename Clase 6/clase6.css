@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+
+#gridAlumnos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ficha{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 5px;
+}

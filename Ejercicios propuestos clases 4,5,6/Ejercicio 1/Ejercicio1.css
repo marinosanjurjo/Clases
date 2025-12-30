@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+div {
+    margin: 20px;
+}
+
+#sumaImpares {
+    border: 1px solid black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

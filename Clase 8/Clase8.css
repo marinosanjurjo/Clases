@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+#gridCuadrado {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cuadrado {
+    width: 100px;
+    /*height: 100px;*/
+    aspect-ratio: 1/1;
+    background-color: #c7c7c7;
+    margin: 5px;
+
+    /**
+        CADA vez que esa propiedad CAMBIE ya sea por CSS o por JS -> Lo haces despacio
+
+    */
+    /* transition: background 1s; */
+    transition: all 1s;
+}
+
+.azul{
+    background-color: lightblue;
+}

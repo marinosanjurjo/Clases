@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#contenedor_main{
+    background-color: lightcoral;
+    font-weight: bold;
+    padding: 20px;
+    color: #fff;
+}

@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    margin: 20px;
+    padding: 20px;
+}
+
+#introducirRadio {
+    border: 1px solid black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
