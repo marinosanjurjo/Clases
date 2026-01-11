@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#gridTablas{
+    display: flex;
+    flex-wrap: wrap; /*cuando los elementos no caben en la dirección principal se apilan en la secundaria*/
+    justify-content: center;
+    align-items: center;
+}
+
+.tabla{
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.tabla h2{
+    margin: 15px 5px;
+}
