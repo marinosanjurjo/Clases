@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+#popup{
+    position: fixed; /*para que este superpuesto*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(192, 192, 192, 0.5);
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#popup.activo{
+    display: flex;
+}
+
+.animacionAbrir{
+    animation-name: abrirPopUp;
+    animation-duration: 1s;
+}
+
+.card{
+    position: relative;
+    max-width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#btnClose {
+    font-weight: bold;
+    color: white;
+    background-color: #000000ca;
+    position: absolute;
+    top: 10px; /*Esto se pone porque hemos puesto posicionamiento absolute y siempre que hay posicionamiento hay que añadir top y right, sino el navegador actua a tu suerte*/
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#btnClose:hover{
+    background-color: rgb(120, 120, 120);
+}
+
+@keyframes abrirPopUp {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
